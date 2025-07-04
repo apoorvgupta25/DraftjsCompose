@@ -5,7 +5,9 @@
    pull_request:
      branches:
        - main
-       - deps-and-versions
+       - dependencies
+       - develop
+       - 'v*.*.*'
 
  jobs:
    build:
