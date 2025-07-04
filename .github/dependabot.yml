@@ -9,7 +9,7 @@ updates:
     schedule:
       interval: "weekly"
       time: "16:00"
-    target-branch: "main"
+    target-branch: "dependencies"
     registries:
       - google
       - jitpack
@@ -21,7 +21,7 @@ updates:
     schedule:
       interval: "weekly"
       time: "16:00"
-    target-branch: "main"
+    target-branch: "dependencies"
     open-pull-requests-limit: 10
     groups:
       github-actions:
