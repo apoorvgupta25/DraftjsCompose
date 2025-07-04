@@ -65,7 +65,7 @@ afterEvaluate {
 
                 groupId = "com.github.apoorvgupta"
                 artifactId = "draftjs-compose"
-                version = "1.0.0"
+                version = "1.1.0"
             }
 
         }
