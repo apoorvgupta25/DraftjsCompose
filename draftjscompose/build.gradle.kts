@@ -7,18 +7,15 @@ plugins {
 
 android {
 
-    val compileSdkVal = 35
-    val minSdkVal = 29
-
     // Kotlin and JVM configuration
     val jvmTargetVal = "17"
     val kotlinCompilerExtensionVersionVal = "1.5.13"
 
     namespace = "com.apoorvgupta.draftjscompose"
-    compileSdk = compileSdkVal
+    compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
-        minSdk = minSdkVal
+        minSdk = libs.versions.android.minSdk.get().toInt()
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -65,7 +62,7 @@ afterEvaluate {
 
                 groupId = "com.github.apoorvgupta"
                 artifactId = "draftjs-compose"
-                version = "1.1.0"
+                version = "1.2.0"
             }
 
         }
