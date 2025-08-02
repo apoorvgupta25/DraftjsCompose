@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "com.apoorvgupta.draftjs"
-    compileSdk = 35
+    compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
         applicationId = "com.apoorvgupta.draftjscompose"
-        minSdk = 29
-        targetSdk = 35
+        minSdk = libs.versions.android.minSdk.get().toInt()
+        targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
         versionName = "1.0"
 
