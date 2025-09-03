@@ -59,12 +59,10 @@ afterEvaluate {
         publications {
             create<MavenPublication>("release") {
                 from(components["release"])
-
                 groupId = "com.github.apoorvgupta"
                 artifactId = "draftjs-compose"
-                version = "1.2.0"
+                version = libs.versions.version.name.get()
             }
-
         }
     }
 }
