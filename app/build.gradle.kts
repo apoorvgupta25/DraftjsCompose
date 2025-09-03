@@ -5,6 +5,10 @@ plugins {
 }
 
 android {
+
+    // Kotlin and JVM configuration
+    val jvmTargetVal = "17"
+
     namespace = "com.apoorvgupta.draftjs"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
@@ -12,8 +16,8 @@ android {
         applicationId = "com.apoorvgupta.draftjscompose"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = libs.versions.version.code.get().toInt()
+        versionName = libs.versions.version.name.get()
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -25,11 +29,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = jvmTargetVal
     }
     buildFeatures {
         compose = true
